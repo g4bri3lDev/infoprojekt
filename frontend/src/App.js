@@ -1,19 +1,31 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import MaterialUIThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import { darkBlack } from 'material-ui/styles/colors';
+import darkBaseTheme from "material-ui/styles/baseThemes/darkBaseTheme";
 import Titlebar from './components/titlebar/Titlebar'
+import Appdrawer from "./components/drawer/Appdrawer";
 
 class App extends Component {
-  render () {
-    return (
-      <div className="App">
-        <MaterialUIThemeProvider muiTheme={getMuiTheme(darkBlack)}>
-          <Titlebar></Titlebar>
-        </MaterialUIThemeProvider>
-      </div>
-    )
-  }
+    handleMenu = () => this.setState({open: !this.state.open})
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            open: false
+        }
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <MaterialUIThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+                    <Titlebar
+                    />
+                    <Appdrawer open={this.state.open}/>
+                </MaterialUIThemeProvider>
+            </div>
+        )
+    }
 }
 
 export default App
