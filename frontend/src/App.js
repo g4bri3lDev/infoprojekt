@@ -3,6 +3,7 @@ import {HashRouter, Route} from 'react-router-dom'
 import MaterialUIThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import darkBaseTheme from "material-ui/styles/baseThemes/darkBaseTheme";
+import './AppCSS.css'
 import Titlebar from './components/titlebar/Titlebar'
 import Appdrawer from "./components/drawer/Appdrawer";
 import Home from './components/pages/Home'
