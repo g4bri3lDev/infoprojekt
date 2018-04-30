@@ -1,4 +1,5 @@
 #!/bin/bash
 cd ~/Documents/infoprojekt/
-git pull
+git fetch --all
+git reset --hard origin/master
 echo "Ok"
