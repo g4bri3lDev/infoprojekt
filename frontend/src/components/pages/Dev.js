@@ -4,7 +4,9 @@ class Dev extends Component {
     render() {
         return (
             <div>
-                Lorem Ipsum Dev
+                urmomg4y
+
+                <img src="http://192.168.4.1:8090/?action=stream" />
             </div>
         )
     }
