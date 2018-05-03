@@ -9,7 +9,7 @@ import Appdrawer from "./components/drawer/Appdrawer";
 import Home from './components/pages/Home'
 import Mappage from './components/pages/Mappage'
 import Navpage from './components/pages/Navpage'
-import Dev from './components/pages/Dev'
+import Dev from './components/pages/dev/Dev'
 
 
 class App extends Component {

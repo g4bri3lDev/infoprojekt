@@ -1,0 +1,12 @@
+.frame {
+    margin-top: 10px;
+}
+
+.paper {
+    padding: 5px;
+    display: inline-block;
+}
+
+.button {
+    margin: 5px;
+}

@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import FlatButton from "material-ui/FlatButton";
-
 
 class Titlebarclock extends Component {
     constructor(props) {
@@ -12,9 +10,7 @@ class Titlebarclock extends Component {
 
     render() {
         return (
-            <FlatButton
-                label={this.state.time.toLocaleTimeString()}/>
-
+            <h3>{this.state.time.toLocaleTimeString()}</h3>
         )
     }
 
