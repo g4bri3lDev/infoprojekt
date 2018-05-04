@@ -24,10 +24,10 @@ class Dev extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            onlineMessage: GeneralService.backendOnline().status
-        })
-        console.log(this.state.onlineMessage)
+        fetch('/online')
+            .then(function (resx) {
+                console.log(resx)
+            })
     }
 
 }

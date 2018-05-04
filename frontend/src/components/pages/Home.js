@@ -4,7 +4,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                Lorem Ipsum Home
+                Lorem ipsum Home  Veni,Vidi, Avicii (RIP)
             </div>
         )
     }
