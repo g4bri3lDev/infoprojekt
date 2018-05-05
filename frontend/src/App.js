@@ -6,7 +6,7 @@ import darkBaseTheme from "material-ui/styles/baseThemes/darkBaseTheme";
 import './AppCSS.css'
 import Titlebar from './components/titlebar/Titlebar'
 import Appdrawer from "./components/drawer/Appdrawer";
-import Home from './components/pages/Home'
+import Home from './components/pages/home/Home'
 import Mappage from './components/pages/Mappage'
 import Navpage from './components/pages/Navpage'
 import Dev from './components/pages/dev/Dev'

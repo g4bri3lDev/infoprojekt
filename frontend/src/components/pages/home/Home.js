@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
+import Roomtable from "./Roomtable";
 
 class Home extends Component {
     render() {
         return (
             <div>
-                Lorem ipsum Home  Veni,Vidi, Avicii (RIP)
+                <Roomtable/>
             </div>
         )
     }
-
 }
 
 export default Home

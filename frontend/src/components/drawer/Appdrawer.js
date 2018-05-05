@@ -6,6 +6,7 @@ import {MenuItem} from "material-ui";
 class Appdrawer extends Component {
 
     render() {
+        // noinspection JSUnresolvedVariable
         return (
             <div>
                 <Drawer
