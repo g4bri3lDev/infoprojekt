@@ -53,10 +53,7 @@ class Roomtable extends Component {
         fetch('/rooms')
             .then(response => response.json())
             .then(data => {
-                console.log(data)
-                this.setState({
-                    roomList: data
-                })
+                this.setState({roomList: data})
             })
     }
 }

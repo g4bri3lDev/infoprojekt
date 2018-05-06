@@ -5,6 +5,12 @@ import TextField from "material-ui/TextField";
 import Toggle from "material-ui/Toggle";
 
 class AddRoom extends Component {
+    onNameChange = (event) => {
+        this.setState({roomName: event.target.value, disabled: event.target.value === ''})
+    }
+    onStairsChange = (event) => {
+        this.setState({isStairs: !this.state.isStairs})
+    }
     close = () => {
         this.reset()
         // noinspection JSUnresolvedFunction
@@ -31,12 +37,6 @@ class AddRoom extends Component {
                 }
             })
     }
-    onNameChange = (event) => {
-        this.setState({roomName: event.target.value})
-    }
-    onStairsChange = (event) => {
-        this.setState({isStairs: !this.state.isStairs})
-    }
     onCommentsChange = (event) => {
         this.setState({comments: event.target.value})
     }
@@ -53,7 +53,8 @@ class AddRoom extends Component {
         this.state = {
             roomName: '',
             isStairs: false,
-            comments: ''
+            comments: '',
+            disabled: true
         }
     }
 
@@ -67,6 +68,7 @@ class AddRoom extends Component {
             <FlatButton
                 label="Submit"
                 primary={true}
+                disabled={this.state.disabled}
                 onClick={this.submit}
             />,
         ]
@@ -87,6 +89,7 @@ class AddRoom extends Component {
             </div>
         )
     }
+
 }
 
 export default AddRoom
