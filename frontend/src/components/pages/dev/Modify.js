@@ -4,16 +4,19 @@ import RaisedButton from 'material-ui/RaisedButton'
 import FontIcon from "material-ui/FontIcon";
 import AddRoom from "./dialog/AddRoom";
 import RemoveRoom from "./dialog/RemoveRoom";
+import AddRoute from './dialog/AddRoute'
 
 class Modify extends Component {
     handleAddRoom = () => this.setState({openAddRoom: !this.state.openAddRoom})
     handleRemoveRoom = () => this.setState({openRemoveRoom: !this.state.openRemoveRoom})
+    handleAddRoute = () => this.setState({openAddRoute: !this.state.openAddRoute})
 
     constructor(props) {
         super(props);
         this.state = {
             openAddRoom: false,
-            openRemoveRoom: false
+            openRemoveRoom: false,
+            openAddRoute: false
         }
     }
 
@@ -30,6 +33,7 @@ class Modify extends Component {
                 </Paper>
                 <AddRoom trigger={this.handleAddRoom} open={this.state.openAddRoom}/>
                 <RemoveRoom trigger={this.handleRemoveRoom} open={this.state.openRemoveRoom}/>
+                <AddRoute trigger={this.handleAddRoute} open={this.state.openAddRoute}/>
             </div>
         )
     }

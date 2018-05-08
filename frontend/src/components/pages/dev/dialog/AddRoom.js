@@ -62,7 +62,7 @@ class AddRoom extends Component {
         const actions = [
             <FlatButton
                 label="Cancel"
-                primary={true}
+                secondary={true}
                 onClick={this.close}
             />,
             <FlatButton
