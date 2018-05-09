@@ -10,9 +10,11 @@ app.use(morgan('combined'))
 app.use(cors())
 app.use(bodyParser.json())
 require('./routes')(app)
+let server = require('http').createServer(app)
+require('./controllers/SocketController')(server)
 
 sequelize.sync()
   .then(() => {
-    app.listen(config.port)
+    server.listen(config.port)
     console.log(`Backend started on Port ${config.port}`)
   })

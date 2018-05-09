@@ -3,6 +3,7 @@ import Cam from './Cam'
 import Modify from './Modify'
 import './DevCSS.css'
 import Backendstatus from "./Backendstatus";
+import RemoteControl from "./dialog/RemoteControl";
 
 class Dev extends Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class Dev extends Component {
                 <Backendstatus/>
                 <Cam/>
                 <Modify/>
+                <RemoteControl/>
             </div>
         )
     }

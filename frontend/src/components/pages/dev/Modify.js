@@ -28,7 +28,7 @@ class Modify extends Component {
                     <RaisedButton className="button" label="Add Room" primary={true} onClick={this.handleAddRoom}/>
                     <RaisedButton className="button" label="Remove Room" primary={true}
                                   onClick={this.handleRemoveRoom}/>
-                    <RaisedButton className="button" label="Add Route" primary={true}/>
+                    <RaisedButton className="button" label="Add Route" primary={true} onClick={this.handleAddRoute}/>
                     <RaisedButton className="button" label="Remove Route" primary={true}/>
                 </Paper>
                 <AddRoom trigger={this.handleAddRoom} open={this.state.openAddRoom}/>

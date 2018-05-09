@@ -79,7 +79,7 @@ class AddRoom extends Component {
                     modal={true}
                     actions={actions}
                     open={this.props.open}>
-                    <TextField floatingLabelText="Room Name *Required" value={this.state.roomName}
+                    <TextField floatingLabelText="Room Name" value={this.state.roomName}
                                onChange={this.onNameChange}/>
                     <Toggle label="Is Stairs" toggled={this.state.isStairs} onToggle={this.onStairsChange}/>
                     <TextField floatingLabelText="Comments" value={this.state.comments} onChange={this.onCommentsChange}
