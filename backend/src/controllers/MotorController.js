@@ -68,8 +68,8 @@ class Motor extends EventEmitter {
         console.log(parseInt(255 * -x1));
         console.log(x1);
         if (x1 > 0) {
-            led2.pwmWrite(parseInt(255 * x1 - parseInt(255 * x0)));
-            led3.pwmWrite(parseInt(255 * x1 - parseInt(255 * -x0)));
+            led2.pwmWrite(parseInt(255 * x1 - Math.abs(parseInt(255 * x0))));
+            led3.pwmWrite(parseInt(255 * x1 - Math.abs(parseInt(255 * -x0))));
             led4.pwmWrite(0);
             led5.pwmWrite(0);
 
@@ -77,8 +77,8 @@ class Motor extends EventEmitter {
         if (x1 < 0) {
             led2.pwmWrite(0);
             led3.pwmWrite(0);
-            led4.pwmWrite(parseInt(255 * -x1 - parseInt(255 * x0)));
-            led5.pwmWrite(parseInt(255 * -x1 - parseInt(255 * -x0)));
+            led4.pwmWrite(parseInt(255 * -x1 - Math.abs(parseInt(255 * x0))));
+            led5.pwmWrite(parseInt(255 * -x1 - Math.abs(parseInt(255 * -x0))));
         }
         if (x1 == 0) {
             this.break();
