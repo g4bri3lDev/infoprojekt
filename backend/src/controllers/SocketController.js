@@ -16,14 +16,17 @@ module.exports = (server) => {
             console.log(--connections)
         })
         socket.on('mouseDown', (direction) => {
+            if (direction == 'back') {
+                motor.backwards();
+            }
+            if (direction == 'up') {
+                motor.forwards();
+            }
             //motor.log('test');
-            motor.on();
             console.log('MouseDown Received, Direction: ' + direction)
         })
         socket.on('mouseUp', (direction) => {
-            if (direction == 'back') {
-                motor.off();
-            }
+            motor.break();
             console.log('MouseUp Received, Direction: ' + direction)
         })
     })

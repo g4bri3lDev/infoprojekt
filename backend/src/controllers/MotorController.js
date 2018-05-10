@@ -21,13 +21,34 @@ class Motor extends EventEmitter {
         this.emit('test', {id: 1, url: 'test'});
     }
 
-    on() {
+    forwards() {
         led1.pwmWrite(255);
         led2.pwmWrite(255);
+        led2.pwmWrite(0);
+        led2.pwmWrite(0);
+        led2.pwmWrite(0);
     }
 
-    off() {
+    backwards() {
         led1.pwmWrite(255);
+        led2.pwmWrite(0);
+        led2.pwmWrite(255);
+        led2.pwmWrite(0);
+        led2.pwmWrite(0);
+    }
+
+    break() {
+        led1.pwmWrite(255);
+        led2.pwmWrite(255);
+        led2.pwmWrite(255);
+        led2.pwmWrite(255);
+        led2.pwmWrite(255);
+    }
+    off() {
+        led1.pwmWrite(0);
+        led2.pwmWrite(0);
+        led2.pwmWrite(0);
+        led2.pwmWrite(0);
         led2.pwmWrite(0);
     }
 }
