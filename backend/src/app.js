@@ -5,7 +5,6 @@ const cors = require('cors')
 const {sequelize} = require('./models')
 const config = require('./config/config')
 
-
 const app = express()
 app.use(morgan('combined'))
 app.use(cors())
