@@ -62,6 +62,13 @@ class Motor extends EventEmitter {
         led5.pwmWrite(255);
     }
 
+    rctl(x0, x1) {
+        led1.pwmWrite(255);
+        led2.pwmWrite(255 * x1);
+        led3.pwmWrite(255 * -x1);
+        led4.pwmWrite(255 * -x1);
+        led5.pwmWrite(255 * x1);
+    }
 
     break() {
         led1.pwmWrite(255);

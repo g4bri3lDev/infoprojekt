@@ -33,10 +33,11 @@ module.exports = (server) => {
         })
         socket.on('mouseUp', (direction) => {
             motor.break();
-            console.log('MouseUp Received, Direction: ' + direction)
+            console.log('MouseUp Received, Direction: ' + direction);
         })
         socket.on('rem', (direction) => {
-            console.log('MouseUp Received, Direction: ' + direction.x0)
+            motor.rctl(direction.x0, direction.x1);
+            console.log('MouseUp Received, Direction: ' + direction.x1);
         })
     })
 
