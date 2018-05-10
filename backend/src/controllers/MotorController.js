@@ -24,32 +24,32 @@ class Motor extends EventEmitter {
     forwards() {
         led1.pwmWrite(255);
         led2.pwmWrite(255);
-        led2.pwmWrite(0);
-        led2.pwmWrite(0);
-        led2.pwmWrite(0);
+        led3.pwmWrite(0);
+        led4.pwmWrite(0);
+        led5.pwmWrite(0);
     }
 
     backwards() {
         led1.pwmWrite(255);
         led2.pwmWrite(0);
-        led2.pwmWrite(255);
-        led2.pwmWrite(0);
-        led2.pwmWrite(0);
+        led3.pwmWrite(255);
+        led4.pwmWrite(0);
+        led5.pwmWrite(0);
     }
 
     break() {
         led1.pwmWrite(255);
         led2.pwmWrite(255);
-        led2.pwmWrite(255);
-        led2.pwmWrite(255);
-        led2.pwmWrite(255);
+        led3.pwmWrite(255);
+        led4.pwmWrite(255);
+        led5.pwmWrite(255);
     }
     off() {
         led1.pwmWrite(0);
         led2.pwmWrite(0);
-        led2.pwmWrite(0);
-        led2.pwmWrite(0);
-        led2.pwmWrite(0);
+        led3.pwmWrite(0);
+        led4.pwmWrite(0);
+        led5.pwmWrite(0);
     }
 }
 
