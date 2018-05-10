@@ -140,7 +140,7 @@ class RemoteControl extends Component {
                             <IconButton onMouseDown={() => this.handleMouseDown('left')}
                                         onMouseUp={() => this.handleMouseUp('left')}><FontIcon
                                 className="material-icons">arrow_back</FontIcon></IconButton>
-                            <IconButton onMouseDown={() => window.setInterval(this.handleremote, 200)}><FontIcon
+                            <IconButton onMouseDown={() => window.setInterval(this.handleremote, 50)}><FontIcon
                                 className="material-icons">album</FontIcon></IconButton>
                             <IconButton onMouseDown={() => this.handleMouseDown('right')}
                                         onMouseUp={() => this.handleMouseUp('right')}><FontIcon
