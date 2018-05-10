@@ -36,7 +36,7 @@ module.exports = (server) => {
             console.log('MouseUp Received, Direction: ' + direction)
         })
         socket.on('rem', (direction) => {
-            console.log('MouseUp Received, Direction: ' + direction)
+            console.log('MouseUp Received, Direction: ' + direction.x0)
         })
     })
 
