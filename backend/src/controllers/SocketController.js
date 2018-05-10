@@ -16,11 +16,12 @@ module.exports = (server) => {
             console.log(--connections)
         })
         socket.on('mouseDown', (direction) => {
-            motor.log('test');
-
+            //motor.log('test');
+            motor.on();
             console.log('MouseDown Received, Direction: ' + direction)
         })
         socket.on('mouseUp', (direction) => {
+            motor.off();
             console.log('MouseUp Received, Direction: ' + direction)
         })
     })

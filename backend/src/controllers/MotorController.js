@@ -19,8 +19,16 @@ class Motor extends EventEmitter {
     log(message) {
         console.log(message);
         this.emit('test', {id: 1, url: 'test'});
+    }
+
+    on() {
         led1.pwmWrite(255);
         led2.pwmWrite(255);
+    }
+
+    off() {
+        led1.pwmWrite(255);
+        led2.pwmWrite(0);
     }
 }
 
