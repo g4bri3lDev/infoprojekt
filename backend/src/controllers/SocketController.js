@@ -17,6 +17,7 @@ module.exports = (server) => {
         })
         socket.on('mouseDown', (direction) => {
             motor.log('test');
+
             console.log('MouseDown Received, Direction: ' + direction)
         })
         socket.on('mouseUp', (direction) => {
