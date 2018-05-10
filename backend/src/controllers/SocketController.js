@@ -22,6 +22,12 @@ module.exports = (server) => {
             if (direction == 'up') {
                 motor.forwards();
             }
+            if (direction == 'left') {
+                motor.left();
+            }
+            if (direction == 'right') {
+                motor.right();
+            }
             //motor.log('test');
             console.log('MouseDown Received, Direction: ' + direction)
         })
