@@ -6,7 +6,7 @@ import Dialog from "material-ui/Dialog";
 import './RemoteControlCSS.css'
 import Paper from "material-ui/Paper";
 
-const socketIOClient = require('socket.io-client')('http://localhost:8081')
+const socketIOClient = require('socket.io-client')('http://' + window.location.hostname + ':8081');
 
 class RemoteControl extends Component {
     handleOpenRemote = () => {
