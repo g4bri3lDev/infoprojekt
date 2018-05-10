@@ -6,9 +6,9 @@ led3 = new Gpio(5, {mode: Gpio.OUTPUT});
 led4 = new Gpio(12, {mode: Gpio.OUTPUT});
 led5 = new Gpio(6, {mode: Gpio.OUTPUT});
 in1 = new Gpio(16, {mode: Gpio.INPUT, pullUpDown: Gpio.PUD_DOWN, edge: Gpio.EITHER_EDGE});
-in2 = new Gpio(20, {mode: Gpio.INPUT});
-in3 = new Gpio(21, {mode: Gpio.INPUT});
-in4 = new Gpio(26, {mode: Gpio.INPUT});
+in2 = new Gpio(20, {mode: Gpio.INPUT, pullUpDown: Gpio.PUD_DOWN, edge: Gpio.EITHER_EDGE});
+in3 = new Gpio(21, {mode: Gpio.INPUT, pullUpDown: Gpio.PUD_DOWN, edge: Gpio.EITHER_EDGE});
+in4 = new Gpio(26, {mode: Gpio.INPUT, pullUpDown: Gpio.PUD_DOWN, edge: Gpio.EITHER_EDGE});
 
 in1.on('interrupt', function (level) {
     console.log('1');
