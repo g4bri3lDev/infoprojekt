@@ -11,7 +11,16 @@ in3 = new Gpio(21, {mode: Gpio.INPUT});
 in4 = new Gpio(26, {mode: Gpio.INPUT});
 
 in1.on('interrupt', function (level) {
-    console.log(level);
+    console.log('1');
+})
+in2.on('interrupt', function (level) {
+    console.log('2');
+})
+in3.on('interrupt', function (level) {
+    console.log('3');
+})
+in4.on('interrupt', function (level) {
+    console.log('4');
 })
 
 
