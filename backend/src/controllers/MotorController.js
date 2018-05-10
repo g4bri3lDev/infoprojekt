@@ -74,7 +74,7 @@ class Motor extends EventEmitter {
             led4.pwmWrite(0);
             led5.pwmWrite(parseInt(255 * x1));
         }
-        if (x1 > 0) {
+        if (x1 < 0) {
             console.log("neg");
             led2.pwmWrite(0);
             led3.pwmWrite(parseInt(255 * -x1));
