@@ -64,16 +64,17 @@ class Motor extends EventEmitter {
 
     rctl(x0, x1) {
         led1.pwmWrite(255);
+        console.log(x1);
         if (x1 > 0) {
-            led2.pwmWrite(255 * x1);
+            led2.pwmWrite(parseInt(255 * x1));
             led3.pwmWrite(0);
             led4.pwmWrite(0);
-            led5.pwmWrite(255 * x1);
+            led5.pwmWrite(parseInt(255 * x1));
         }
         if (x1 < 0) {
             led2.pwmWrite(0);
-            led3.pwmWrite(255 * -x1);
-            led4.pwmWrite(255 * -x1);
+            led3.pwmWrite(parseInt(255 * -x1));
+            led4.pwmWrite(parseInt(255 * -x1));
             led5.pwmWrite(0);
         }
     }
