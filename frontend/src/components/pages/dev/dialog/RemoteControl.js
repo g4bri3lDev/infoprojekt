@@ -84,7 +84,6 @@ function scangamepads() {
     }
 }
 
-
 class RemoteControl extends Component {
     handleOpenRemote = () => {
         this.setState({openRemoteControl: !this.state.openRemoteControl})
