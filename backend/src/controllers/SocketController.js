@@ -21,7 +21,7 @@ module.exports = (server) => {
             console.log('MouseDown Received, Direction: ' + direction)
         })
         socket.on('mouseUp', (direction) => {
-            if (direction.toString().equals('back')) {
+            if (direction.toString().equals("back")) {
                 motor.off();
             }
             console.log('MouseUp Received, Direction: ' + direction)
