@@ -28,6 +28,7 @@ class RemoveRoom extends Component {
     }
     onQueryChange = (event) => {
         this.setState({query: event.target.value})
+        this.queryDB()
     }
     queryDB = () => {
         fetch('/queryRooms', {
@@ -100,7 +101,6 @@ class RemoveRoom extends Component {
                     actions={actions}
                     open={this.props.open}>
                     <TextField floatingLabelText="Search Query" value={this.state.query} onChange={this.onQueryChange}/>
-                    <FlatButton label="Search" primary={true} onClick={this.queryDB}/>
                     <Table onRowSelection={this.handleRowSelection}>
                         <TableHeader displaySelectAll={false}>
                             <TableRow>
