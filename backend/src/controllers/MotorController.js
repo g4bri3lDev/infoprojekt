@@ -1,5 +1,5 @@
 const EventEmitter = require('events');
-var Gpio = require('pigpio-mock').Gpio;
+let Gpio = require('pigpio-mock').Gpio;
 led1 = new Gpio(19, {mode: Gpio.OUTPUT});
 led2 = new Gpio(13, {mode: Gpio.OUTPUT});
 led3 = new Gpio(5, {mode: Gpio.OUTPUT});

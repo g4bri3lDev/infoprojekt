@@ -6,7 +6,7 @@ import Dialog from "material-ui/Dialog";
 import './RemoteControlCSS.css'
 import Paper from "material-ui/Paper";
 
-const socketIOClient = require('socket.io-client')('http://localhost:8081')
+const socketIOClient = require('socket.io-client')('http://' + window.location.hostname + ':8081')
 
 class RemoteControl extends Component {
     handleOpenRemote = () => {
@@ -23,10 +23,12 @@ class RemoteControl extends Component {
     }
 
     handleMouseDown(direction) {
+        // noinspection JSUnresolvedFunction
         socketIOClient.emit('mouseDown', direction)
     }
 
     handleMouseUp(direction) {
+        // noinspection JSUnresolvedFunction
         socketIOClient.emit('mouseUp', direction)
     }
 
@@ -52,22 +54,30 @@ class RemoteControl extends Component {
                         open={this.state.openRemoteControl}>
                         <div className="btns">
                             <IconButton onMouseDown={() => this.handleMouseDown('up')}
-                                        onMouseUp={() => this.handleMouseUp('up')}><FontIcon
+                                        onTouchStart={() => this.handleMouseDown('up')}
+                                        onMouseUp={() => this.handleMouseUp('up')}
+                                        onTouchEnd={() => this.handleMouseUp('up')}><FontIcon
                                 className="material-icons">arrow_upward</FontIcon></IconButton>
                         </div>
                         <div className="btns">
                             <IconButton onMouseDown={() => this.handleMouseDown('left')}
-                                        onMouseUp={() => this.handleMouseUp('left')}><FontIcon
+                                        onTouchStart={() => this.handleMouseDown('left')}
+                                        onMouseUp={() => this.handleMouseUp('left')}
+                                        onTouchEnd={() => this.handleMouseUp('left')}><FontIcon
                                 className="material-icons">arrow_back</FontIcon></IconButton>
                             <IconButton><FontIcon
                                 className="material-icons">album</FontIcon></IconButton>
                             <IconButton onMouseDown={() => this.handleMouseDown('right')}
-                                        onMouseUp={() => this.handleMouseUp('right')}><FontIcon
+                                        onTouchStart={() => this.handleMouseDown('right')}
+                                        onMouseUp={() => this.handleMouseUp('right')}
+                                        onTouchEnd={() => this.handleMouseUp('right')}><FontIcon
                                 className="material-icons">arrow_forward</FontIcon></IconButton>
                         </div>
                         <div className="btns">
                             <IconButton onMouseDown={() => this.handleMouseDown('back')}
-                                        onMouseUp={() => this.handleMouseUp('back')}><FontIcon
+                                        onTouchStart={() => this.handleMouseDown('back')}
+                                        onMouseUp={() => this.handleMouseUp('back')}
+                                        onTouchEnd={() => this.handleMouseUp('back')}><FontIcon
                                 className="material-icons">arrow_downward</FontIcon></IconButton>
 
                         </div>
