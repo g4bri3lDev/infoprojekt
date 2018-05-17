@@ -1,5 +1,5 @@
 const socketio = require('socket.io')
-const Motor = require('./MotorController');
+const Motor = require('./mcmock');
 const motor = new Motor;
 
 motor.on('test', (arg) => {
