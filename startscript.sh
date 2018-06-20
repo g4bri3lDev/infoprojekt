@@ -11,3 +11,4 @@ sudo su - pi -c '/home/pi/mjpg-streamer/mjpg-streamer-experimental/mjpg_streamer
 sudo su - root -c "npm start --prefix /root/infoprojekt/frontend > output.log 2>&1 &"
 sudo su - root -c "npm start --prefix /root/infoprojekt/backend > output.log 2>&1 &"
 echo "Ok"
+exit 0
