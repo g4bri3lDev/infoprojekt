@@ -10,5 +10,5 @@ curl -o- https://raw.githubusercontent.com/g4bri3lDev/infoprojekt/master/install
 # Todo
 
 - [x] Kamera Livestream 
-- [ ] Live Fernsteuerung 
+- [x] Live Fernsteuerung 
 - [ ] Install script fertigstellen
