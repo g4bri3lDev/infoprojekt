@@ -1,4 +1,5 @@
 #!/bin/bash
+#created by Jonas Niesner
 cd /root/infoprojekt/
 #updates the project and rearms the start script
 git fetch --all
