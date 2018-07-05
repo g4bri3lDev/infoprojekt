@@ -163,14 +163,16 @@ function hex_to_ascii(str1){
 	return str;
  }
 
+class Lidar{
 //sends the lidar start command over the serial port
-function lidar_start(){
+start(){
 port.write(hex_to_ascii('A560'));
 } 
 
 //sends the lidar stop command over the serial port
-function lidar_stop(){ 
+stop(){ 
 port.write(hex_to_ascii('A565'));
 } 
+}
 
-setTimeout(lidar_start, 3000);
+module.exports = Lidar;
