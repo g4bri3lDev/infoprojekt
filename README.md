@@ -8,9 +8,9 @@ curl -o- https://raw.githubusercontent.com/g4bri3lDev/infoprojekt/master/install
 ```
 
 # Dokumentation
-```
-https://docs.google.com/document/d/1cijn474ASSb2a3IGgnycqPlgZ26TlScUDVhCoLcBpqo/edit?usp=sharing
-```
+
+Die Dokumentation kann [hier](https://docs.google.com/document/d/1cijn474ASSb2a3IGgnycqPlgZ26TlScUDVhCoLcBpqo/edit?usp=sharing) eingesehen werden.
+
 
 # Todo
 
