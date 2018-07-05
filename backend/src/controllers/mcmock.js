@@ -1,3 +1,7 @@
+//Motor Mock 
+//written by Jonas Niesner
+//This file is used to replace the Motor controller for programming on devices other than the target device to replace the IO calls with console logs
+//more information about this can be found in the real Motor Controller
 const EventEmitter = require('events');
 
 class Motor extends EventEmitter {
