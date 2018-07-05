@@ -1,5 +1,6 @@
 //controll code for the 'YDLIDAR X4' lidar
 //written by Jonas Niesner
+// some lidar functions are not yet implemented, but those are not required for this project
 
 //config
 //system port name
@@ -62,27 +63,64 @@ function processdat(){
    //writes last angle for the fame check
    lastval = angle;
    //data processing stuff
-   if(15 > angle || angle > 345){
-     console.log(angle);
-     console.log("> m " + dist);
+   //calculates the lowest distance for 3 zones whitch get used for the motor controll later
+if(15 > angle || angle > 345){
+     //console.log(angle);
+     //console.log("> m " + dist);
      if(datavalid(dist)){
-     
-         
+        if(centre_min > dist){
+            centre_min = dist;
+        }
     }
    }
-   if(15 < angle && angle < 45){
-     console.log(angle);
-     console.log("> r " + dist);
+   if(15 < angle && angle < 90){
+     //console.log(angle);
+     //console.log("> r " + dist);
+     if(datavalid(dist)){
+	     if(right_min > dist){
+            right_min = dist;
+        }
+    }
    }
-   if(345 > angle && angle < 315){
-     console.log(angle);
-     console.log("> l " + dist);
+   if(345 > angle && angle > 270){
+     //console.log(angle);
+     //console.log("> l " + dist);
+     if(datavalid(dist)){
+        if(left_min > dist){
+ left_min = dist;
+        }
+    }
    }
 }
 }
-
+//gets executed after every lidar rotation
+//now it only does basic object avoidance
+//console logs will be used to controll the motors later, this feture already got tested and works but crashed the backend so it was removed for the code review
 function frame_done(){
-    
+    console.log('centre >> '+ centre_min);
+    console.log('left >> '+ left_min);
+    console.log('right >> '+ right_min);
+if(left_min < 400){
+   console.log("right");
+}    
+else if(right_min < 400){
+   console.log("right");
+}    
+else if(centre_min < 600){
+        if(left_min > right_min){
+             console.log("left");
+		        }
+        else if(right_min > left_min){
+             console.log("right");
+        }
+        else{
+             console.log("right");
+        }
+    }
+    else{
+     console.log("forwards");
+}
+//resets the minimum distances
      centre_min = max_dist;
      left_min = max_dist;
      right_min = max_dist;
@@ -124,17 +162,15 @@ function hex_to_ascii(str1){
 	}
 	return str;
  }
- 
+
+//sends the lidar start command over the serial port
 function lidar_start(){
 port.write(hex_to_ascii('A560'));
-setTimeout(lidar_stop, 2000000);
-    
 } 
 
+//sends the lidar stop command over the serial port
 function lidar_stop(){ 
 port.write(hex_to_ascii('A565'));
-setTimeout(lidar_start, 20);
-    
 } 
 
 setTimeout(lidar_start, 3000);
