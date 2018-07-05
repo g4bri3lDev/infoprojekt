@@ -1,4 +1,5 @@
 #!/bin/bash
+#created by Jonas Niesner
 #sets start point
 cd ~/Documents/
 #clones the project from github
