@@ -16,6 +16,7 @@ module.exports = (server) => {
             console.log(--connections)
         })
         socket.on('mouseDown', (direction) => {
+            //TODO if to case
             if (direction == 'back') {
                 motor.backwards();
             }
