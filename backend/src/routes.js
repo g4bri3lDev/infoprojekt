@@ -8,7 +8,7 @@ module.exports = (app) => {
   app.post('/addRoom', RoomController.addRoom)
   app.post('/queryRooms', RoomController.queryRooms)
   app.post('/deleteRoom', RoomController.deleteRoom)
-  app.get('/playSound', AudioController.playSound)
+  app.get('/playSound', AudioController.play)
 
 }
 // TODO add Functionality to Routes aswell
